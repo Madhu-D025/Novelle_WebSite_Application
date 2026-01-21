@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, duration);
   }
 
-
+// Join Community Model 
 
   const joinModal = document.getElementById("joinModal");
   const joinButtons = document.querySelectorAll(".join-btn");
