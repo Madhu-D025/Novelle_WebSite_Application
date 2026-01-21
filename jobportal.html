@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Novelle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/jobportal.css">
+</head>
+<body>
+    <!-- Header  -->
+    <nav class="navbar navbar-expand-lg sticky-top novelle-navbar">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/header/Header-img.png" alt="Novelle Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto gap-2 gap-lg-1">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="schoolerp.html">School ERP</a></li>
+                            <li><a class="dropdown-item" href="jobportal.html">Job Portal</a></li>
+                            <li><a class="dropdown-item" href="learningapplication.html">Learning Application</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="community.html">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-column flex-lg-row gap-3 mt-3 mt-lg-0 align-items-center">
+                    <a href="contact.html" class="btn btn-outline-novelle">Sign In</a>
+                    <a href="contact.html" class="btn btn-novelle">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Body  -->
+    <main>
+        <section class="py-5 bg-white">
+            <div class="container text-center">
+                <h1 class="mainheading mb-4">Job Portal</h1>
+                <p class="mainsubheading mb-5">
+                    Freelance job platform where companies hire talent and manage projects<br>
+                    in one place. LinkedIn + Upwork + project management.
+                </p>
+                <button class="join-btn mb-5" onclick="openJoinModal()"> Join Community </button>
+                <div class="dashboard-mockup mx-auto">
+                    <img src="assets/images/jobportal/jpimg1.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="service-cards-section py-5">
+            <div class="hero-container">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="service-card position-relative">
+                            <div class="card-content">
+                                <span class="erp-tag">Operations Dashboard</span>
+                                <h3 class="erp-title">ADMIN</h3>
+                                <ul class="erp-list">
+                                    <li>Manage clients, freelancers & experts</li>
+                                    <li>Approve users & verify credentials</li>
+                                    <li>Monitor transactions & commissions</li>
+                                    <li>Analytics & platform performance</li>
+                                </ul>
+                            </div>
+                            <img src="assets/images/jobportal/jp1.png" class="card-shape shape-bottom-right" alt="deco">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-card position-relative">
+                            <div class="card-content">
+                                <span class="erp-tag">Academic Operations</span>
+                                <h3 class="erp-title">CLIENT</h3>
+                                <ul class="erp-list">
+                                    <li>Post projects with budget & timeline</li>
+                                    <li>Shortlist, interview & hire talent</li>
+                                    <li>Milestone payments & project tracking</li>
+                                    <li>Performance reviews & repeat hiring</li>
+                                </ul>
+                            </div>
+                            <img src="assets/images/jobportal/jp2.png" class="card-shape shape-top-right" alt="deco">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-card position-relative">
+                            <div class="card-content">
+                                <span class="erp-tag">Academic Dashboard</span>
+                                <h3 class="erp-title">FREELANCER</h3>
+                                <ul class="erp-list">
+                                    <li>Browse & apply to relevant projects</li>
+                                    <li>Submit proposals & milestones</li>
+                                    <li>Client messaging & collaboration</li>
+                                    <li>Earnings tracking & payment history</li>
+                                </ul>
+                            </div>
+                            <img src="assets/images/jobportal/jp3.png" class="card-shape shape-bottom-right" alt="deco">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-card position-relative">
+                            <div class="card-content">
+                                <span class="erp-tag">Mentorship Programs</span>
+                                <h3 class="erp-title">EXPERT</h3>
+                                <ul class="erp-list">
+                                    <li>One-on-one career improvement sessions</li>
+                                    <li>Bulk workshops for freelancer upskilling</li>
+                                    <li>Skill assessment & personalized roadmaps</li>
+                                    <li>Mock interviews & portfolio reviews</li>
+                                </ul>
+                            </div>
+                            <img src="assets/images/jobportal/jp4.png" class="card-shape shape-top-right-expert"
+                                alt="deco">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="demo-features-section">
+            <div class="shape shape-right-swirl"></div>
+            <div class="shape shape-left-swirl"></div>
+            <div class="shape shape-bottom-right-ring"></div>
+            <div class="container text-center mb-5 position-relative">
+                <h2 class="demo-heading mb-4">
+                    Launch your freelance platform.<br>
+                    Request a personalized demo.
+                </h2>
+                <a href="#" class="cta-btn">Explore Our Solutions</a>
+            </div>
+            <div class="container position-relative">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="demo-card border-blue">
+                            <h5>Clear Roles</h5>
+                            <p>Each user sees only what they need. <br /> No Clutter, just focus</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="demo-card border-yellow">
+                            <h5>Simple Flows</h5>
+                            <p>Post → Apply → Hire → Work → <br /> Pay, just a streamlined process.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="demo-card border-blue">
+                            <h5>Smart Plans</h5>
+                            <p>Choose between access. Upgrade <br /> anytime for more features. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq-section py-5 bg-white">
+            <div class="hero-container py-lg-5">
+                <div class="row g-5 font-serif">
+                    <div class="col-lg-5">
+                        <h2 class="faq-main-heading mb-3">Frequently Asked Questions</h2>
+                        <p class="faq-subtitle text-secondary">
+                            Everything you need to know before getting started with application
+                        </p>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="accordion accordion-flush" id="faqAccordion">
+                            <div class="faq-card mb-4">
+                                <div class="accordion-item border-gray">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button custom-faq-btn" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq1">
+                                            What services does NOVELLE offer?
+                                            <div class="faq-icon-wrapper">
+                                                <i class="bi bi-arrow-right-short"></i>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="faq1" class="accordion-collapse collapse show"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body faq-content pt-0">
+                                            <p class="mb-2">Complete digital solutions for education:</p>
+                                            <ul class="ps-3">
+                                                <li>School ERP (Admin/Teacher/Student/Parent)</li>
+                                                <li>Freelance hiring platform</li>
+                                                <li>Learning Application (Courses & certification)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-card mb-4">
+                                <div class="accordion-item border-gray">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button custom-faq-btn collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq2">
+                                            How much does School ERP cost?
+                                            <div class="faq-icon-wrapper">
+                                                <i class="bi bi-arrow-right-short"></i>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body faq-content pt-0">
+                                            Our pricing is flexible and tailored to the size of your institution. Please
+                                            contact us for a custom quote.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-card mb-4">
+                                <div class="accordion-item border-gray">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button custom-faq-btn collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq3">
+                                            Do you provide support and training?
+                                            <div class="faq-icon-wrapper">
+                                                <i class="bi bi-arrow-right-short"></i>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body faq-content pt-0">
+                                            Yes, we provide 24/7 technical support and comprehensive onboarding training
+                                            for your staff.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-card mb-4">
+                                <div class="accordion-item border-gray">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button custom-faq-btn collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq4">
+                                            Can we keep our existing website?
+                                            <div class="faq-icon-wrapper">
+                                                <i class="bi bi-arrow-right-short"></i>
+                                            </div>
+                                        </button>
+                                    </h2>
+                                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body faq-content pt-0">
+                                            Absolutely. Our ERP and learning solutions can be integrated with your
+                                            existing digital presence.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="novelle-cta position-relative overflow-hidden">
+            <div class="shape shape-gold"></div>
+            <div class="shape shape-blue"></div>
+            <div class="shape shape-orange"></div>
+            <div class="container position-relative z-1">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8 text-center">
+                        <h2 class="cta-heading mb-3">Join the Novelle Journey</h2>
+                        <p class="cta-subtitle mb-5">
+                            Be part of a platform that's transforming how we learn, work, and grow
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <a href="contact.html" class="cta-btn">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer  -->
+    <footer class="novelle-footer">
+        <div class="footer-wrapper">
+            <div class="footer-content">
+                <div class="footer-column footer-brand">
+                    <a href="index.html"><img src="assets/images/footer/footer-logo-img.png" alt="Novelle Logo" class="footer-logo"></a>
+                    <h2 class="footer-brand-title">NOVELLE</h2>
+                    <p class="footer-brand-text">One Platform. Infinite Growth. <br /> Learn better. Build smarter. Work
+                        <br />
+                        freely. Grow together.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-section-heading">SOLUTIONS</h3>
+                    <ul class="footer-links">
+                        <li><a href="#education-erp">• Education ERP</a></li>
+                        <li><a href="#courses">• Courses & Learning</a></li>
+                        <li><a href="#freelancing">• Freelancing</a></li>
+                        <li><a href="#hire-talent">• Hire Talent</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-section-heading">COMPANY</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">• About Us</a></li>
+                        <li><a href="community.html">• Community</a></li>
+                        <li><a href="event.html">• Events</a></li>
+                        <li><a href="contact.html">• Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-section-heading">LEGAL</h3>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">• Privacy Policy</a></li>
+                        <li><a href="#terms">• Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social-container">
+                    <a href="https://linkedin.com" class="social-link" target="_blank" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com" class="social-link" target="_blank" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com" class="social-link" target="_blank" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" class="social-link" target="_blank" aria-label="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="https://youtube.com" class="social-link" target="_blank" aria-label="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Novelle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jobportal.js"></script>
+    <!-- Join Community Model -->
+     <div id="toaster" class="toaster"></div>
+    <div id="joinModal" class="modal-overlay">
+        <div class="modal-content modal-compact">
+            <button class="modal-close" id="joinModalClose">×</button>
+            <div class="modal-scroll-container">
+                <header class="modal-header">
+                    <h2>Join the Novelle Community</h2>
+                    <p class="subtitle">Learn. Collaborate. Grow Together.</p>
+                </header>
+                <div class="modal-body">
+                    <form class="novelle-form" id="joinForm" novalidate>
+                        <div class="form-grid">
+                            <div class="field-group">
+                                <label>FULL NAME</label>
+                                <input type="text" class="input-field" id="fullName" required>
+                                <span class="error-message">Enter a valid name.</span>
+                            </div>
+                            <div class="field-group">
+                                <label>EMAIL</label>
+                                <input type="email" class="input-field" id="email" required>
+                                <span class="error-message">Enter a valid email.</span>
+                            </div>
+                            <div class="field-group">
+                                <label>MOBILE NUMBER</label>
+                                <input type="tel" class="input-field" id="mobile" required>
+                                <span class="error-message">Enter a valid 10-digit number.</span>
+                            </div>
+                            <div class="field-group">
+                                <label>CITY / LOCATION</label>
+                                <input type="text" class="input-field" id="city" required>
+                                <span class="error-message">City cannot be empty.</span>
+                            </div>
+                        </div>
+                        <div class="field-group full-width">
+                            <label>YOUR ROLE / IDENTITY</label>
+                            <p class="instruction">How do you identify yourself on Novelle?</p>
+                            <select class="input-field select-custom" id="role" required>
+                                <option disabled selected>Select role</option>
+                                <option>Student</option>
+                                <option>Professional</option>
+                                <option>Freelancer</option>
+                                <option>Entrepreneur</option>
+                            </select>
+                            <span class="error-message">Please select a role.</span>
+                        </div>
+                        <div class="field-group full-width">
+                            <label>AREA OF INTEREST</label>
+                            <p class="instruction">What are you interested in?</p>
+                            <select class="input-field select-custom" id="interest" required>
+                                <option disabled selected>Select one or more</option>
+                                <option>Web Development</option>
+                                <option>Data Science</option>
+                                <option>Mobile Development</option>
+                                <option>UI/UX Design</option>
+                            </select>
+                            <span class="error-message">Please select an area of interest.</span>
+                        </div>
+                        <div class="field-group full-width">
+                            <label>SKILLS / EXPERTISE</label>
+                            <p class="instruction">Your Primary Skills or Interests</p>
+                            <select class="input-field select-custom" id="skills" required>
+                                <option disabled selected>Select one or more</option>
+                                <option>.NET</option>
+                                <option>SQL</option>
+                                <option>DBMS</option>
+                                <option>HTML</option>
+                                <option>CSS</option>
+                                <option>JS</option>
+                                <option>REACT</option>
+                                <option>Python</option>
+                                <option>Node.js</option>
+                            </select>
+                            <span class="error-message">Please select at least one skill.</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button class="btn-submit" id="joinModalConfirm" type="button">Join the Novelle Community</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
