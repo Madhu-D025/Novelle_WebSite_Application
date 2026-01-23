@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Join Community Model 
+// Join Community Model
 
 function showToaster(message, type = "success", duration = 3000) {
   const toaster = document.getElementById("toaster");
@@ -130,6 +130,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+function showToaster(message, type = "success", duration = 3000) {
+  const toaster = document.getElementById("toaster");
+  if (!toaster) return;
+
+  const toast = document.createElement("div");
+  toast.className = `toaster-message ${type}`;
+  toast.innerText = message;
+
+  toaster.appendChild(toast);
+
+  setTimeout(() => toast.classList.add("show"), 50);
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 500);
+  }, duration);
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contactForm");
@@ -166,9 +183,80 @@ document.addEventListener("DOMContentLoaded", () => {
       formMessage.classList.remove("invalid");
     }
 
+    // if (isValid) {
+    //   alert("Message sent successfully!");
+    //   contactForm.reset();
+    // }
+
     if (isValid) {
-      alert("Message sent successfully!");
-      contactForm.reset();
+      message("Message sent successfully!", "success");
+      this.reset();
+      [formName, formEmail, formMessage].forEach(el => el.classList.remove("invalid"));
+    }
+  });
+});
+
+// --- Global Toaster Function ---
+function showToaster(message, type = "success", duration = 3000) {
+  const toaster = document.getElementById("toaster");
+  if (!toaster) return;
+
+  const toast = document.createElement("div");
+  toast.className = `toaster-message ${type}`;
+  toast.innerText = message;
+
+  toaster.appendChild(toast);
+
+  setTimeout(() => toast.classList.add("show"), 50);
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 500);
+  }, duration);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
+  const formName = document.getElementById("formName");
+  const formEmail = document.getElementById("formEmail");
+  const formMessage = document.getElementById("formMessage");
+
+  formName?.addEventListener("input", (e) => {
+    e.target.value = e.target.value.replace(/[^a-zA-Z ]/g, '');
+  });
+
+  contactForm?.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    if (!/^[a-zA-Z ]{2,50}$/.test(formName.value.trim())) {
+      formName.classList.add("invalid");
+      showToaster("Please enter a valid Name.", "error");
+      isValid = false;
+    } else {
+      formName.classList.remove("invalid");
+    }
+
+    if (isValid && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formEmail.value.trim())) {
+      formEmail.classList.add("invalid");
+      showToaster("Please enter a valid Email.", "error");
+      isValid = false;
+    } else if (isValid) {
+      formEmail.classList.remove("invalid");
+    }
+
+    if (isValid && formMessage.value.trim().length < 10) {
+      formMessage.classList.add("invalid");
+      showToaster("Message must be at least 10 characters.", "error");
+      isValid = false;
+    } else if (isValid) {
+      formMessage.classList.remove("invalid");
+    }
+
+    if (isValid) {
+      showToaster("Thank you! Your message has been sent.", "success");
+      this.reset();
+      [formName, formEmail, formMessage].forEach(el => el.classList.remove("invalid"));
     }
   });
 });
